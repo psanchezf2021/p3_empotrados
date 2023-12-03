@@ -19,3 +19,11 @@ Para entrar el estado 4 (el estado admin) he creado una interrumción asociada a
 - Estado 5: con un switch, dependiendo de la posición de la lista en la que se haya pulsado el botón va a mostrar una cosa u otra. Para la temperatura, humedad, tiempo y distancia simplemente se muestra en el lcd la información necesaria. Para modificar los precios es cuando la cosa cambia, primero, se mostrará la lista de los productos y cuando se seleccione uno de ellos con el botón del joystick, pasará al siguiente caso del switch, en el que según la posición del joystick se modificará el precio del producto seleccionado cambiando también la lista de precios. Si en cualquiera de los casos de este switch se mueve el joystick a la izquierda, se volverá al estado 4.
 
 Por último he creado un watchdog para que vigile que el bucle principal ejecute cada 500ms, esto es posible ya que solo hay dos delays en todo el programa, uno en el bucle principal para que el lcd no parpadee demasiado rápido y otro en las mediciones de distancia para que el ultrasonidos funcione correctamente.
+
+Esquema de conexiones:
+
+![Screenshot from 2023-12-03 20-49-18](https://github.com/psanchezf2021/p3_empotrados/assets/92941198/ac9b9eb6-7afd-4bbe-86d6-592e6ff53e73)
+
+Video del funcionamiento:
+
+https://github.com/psanchezf2021/p3_empotrados/assets/92941198/df3069d3-dade-4d3a-876a-01a278d89722
