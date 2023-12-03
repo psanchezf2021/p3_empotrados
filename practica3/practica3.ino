@@ -55,6 +55,7 @@ void stop() {
   } else{
     if(millis() - interrupt_start >= 2000 && millis() - interrupt_start <= 3000 && (state == 1 || state == 2 || state == 3)) {
       time_start = millis();
+      analogWrite(LED2, 0);
       state = 0;
     }else if(millis() - interrupt_start >= 5000) {
       if (state != 4) {
@@ -198,7 +199,9 @@ void loop() {
         analogWrite(LED2, brightness);
         lcd.clear();
         lcd.setCursor(0, 0);
-        lcd.print("Preparando Cafe ...");
+        lcd.print("Preparando");
+        lcd.setCursor(0, 1);
+        lcd.print("Cafe ...");
         brightness += randNumber/2000;
       }
       break;
